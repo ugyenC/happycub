@@ -34,10 +34,7 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-  section {
-    overflow: auto;
-  }
-  
+
   textarea {
     resize: vertical;
   }
@@ -46,31 +43,7 @@ body {
     text-align: center;
   }
   
-  .center h1 {
-    margin-bottom: 10px;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    line-height: 1;
-  }
-  
-  h1 {
-    font-size: 3em;
-    letter-spacing: -2px;
-    margin-bottom: 30px;
-    text-align: center;
-    
-  }
-  
-  h2 {
-    font-size: 1.2em;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-weight: normal;
-    color: rgb(0, 0, 0);
-  }
-  
+
   p {
     font-size: 1.1em;
     line-height: 1.7em;
@@ -99,12 +72,6 @@ header,
   margin: 6rem;
   background-color: #f7f7f9;
   border-radius: 0.6rem;
-}
-
-@media (min-width: 576px) {
-  .jumbotron {
-    padding: 4rem 2rem;
-  }
 }
 
 .navbar.bg-dark {
