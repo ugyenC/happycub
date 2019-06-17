@@ -1,0 +1,11 @@
+
+- if current_user
+  = render 'layouts/container'
+  %h3 News
+  %hr.my-4/
+  - @posts.each do |post|
+    %p
+      = link_to post.title, post
+- else
+  = render 'layouts/jumbo'
+  %h1 Welcome To HappyClub

@@ -13,7 +13,7 @@ gem 'rails_admin'
 gem 'bootstrap-sass'
 gem 'simple_form', '~> 4.1'
 
-gem 'haml', '~> 5.0', '>= 5.0.4'
+gem 'haml'
 gem 'sendgrid-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
