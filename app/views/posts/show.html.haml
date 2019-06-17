@@ -1,0 +1,17 @@
+.jumbotron
+  %p
+    %strong Title:
+    = @post.title
+  %hr.my-4/
+  %p
+    = image_tag(@post.image)
+  %hr.my-4/
+  %p
+    = @post.body
+  %p
+    %strong By:
+    %i= @post.user.fname
+  - if current_user && current_user.admin
+    = link_to 'Edit', edit_post_path(@post)
+    |
+  = link_to 'Back', root_path
