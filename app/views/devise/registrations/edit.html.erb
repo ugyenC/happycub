@@ -6,17 +6,24 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
 
-  <div class="field">
+  <div class="form-group">
+
+  <% if resource.avatar.attached? %>
+    <%= image_tag resource.avatar, size: "100x100",class: "rounded-circle" %>
+  <% else %>
+    <%= gravatar_image_tag(current_user.email) %>
+  <% end %>
+
     <%= f.label :profile_picture %>
     <%= f.file_field :avatar %>
   </div>
 
   <div class="form-group">
       <%= f.label :first_name %><br/>
-      <%= f.text_field :fname, autofocus: true,value:"", class: "form-control" %>
+      <%= f.text_field :fname, autofocus: true, autocomplete: "fname",class: "form-control" %>
     
      <%= f.label :last_name %><br/>
-     <%= f.text_field :lname, autofocus: true ,value:"",class: "form-control" %>
+     <%= f.text_field :lname, autofocus: true ,autocomplete: "lname",class: "form-control" %>
     
 
     <div class="form-group">

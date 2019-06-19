@@ -5,14 +5,9 @@ ruby '2.6.3'
 
 #devise
 gem 'devise'
-
 gem 'dotenv-rails'
-
-gem 'rails_admin'
-
 gem 'bootstrap-sass'
 gem 'simple_form', '~> 4.1'
-
 gem 'haml'
 gem 'sendgrid-ruby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

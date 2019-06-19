@@ -1,0 +1,32 @@
+<div class="jumbotron">
+<% if current_user %>
+
+<% if current_user.avatar.attached? %>
+ <%= image_tag current_user.avatar, size: "100x100", class: "rounded-circle" %>
+<% else %>
+<%= gravatar_image_tag(current_user.email) %>
+<% end %>
+
+
+<p> Name:  
+   <%=  current_user.fname %>
+   <%= current_user.lname %>
+</p>
+<p> Gender:  
+   <% if current_user.is_female == false %>
+      male
+    <% else %>
+     female
+     <% end %>
+</p>
+<p>Date of birth:
+ <%= current_user.date_of_birth %>
+</p>
+<p>Email:
+ <%= current_user.email %>
+</p>
+
+<% end %>
+<%= link_to 'Edit Profile', edit_user_registration_path, class: "btn  btn-primary" %>
+
+</div>

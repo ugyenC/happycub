@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :users
+      resources :posts
+
+      root to: "users#index"
+    end
+  get 'users/show'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts
   
@@ -6,6 +13,8 @@ Rails.application.routes.draw do
   scope "/admin" do
     resources :users
   end
+
+  get 'devise/profile'
   
   root to: 'welcome#index'
   
@@ -14,5 +23,8 @@ Rails.application.routes.draw do
       get :confirm_email
     end
   end
+
+
+  match '/show', to: 'users#show' , via: 'get'
 
 end
