@@ -18,11 +18,11 @@
       = f.label :date_of_birth
       %br/
       = f.date_select :date_of_birth,start_year: 1930
-
-    = f.check_box :is_female, {}, true
-    = f.label :is_female, "Female"
-    = f.check_box :is_female, {}, false
-    = f.label :is_female, "Male"
+    
+    =f.radio_button :is_female, false
+    =f.label :gender_male, "Male"
+    =f.radio_button :is_female, true
+    =f.label :gender_female, "Female"
     %br/
 
     = f.label :email

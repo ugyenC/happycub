@@ -9,19 +9,22 @@
 
 
 <p> Name:  
-   <%=  current_user.fname %>
-   <%= current_user.lname %>
+   <%=  current_user.fname.capitalize! %>
+   <%= current_user.lname.capitalize! %>
 </p>
+
 <p> Gender:  
    <% if current_user.is_female == false %>
-      male
-    <% else %>
-     female
-     <% end %>
+     Male
+   <% else %>
+     Female
+   <% end %>
 </p>
+
 <p>Date of birth:
  <%= current_user.date_of_birth %>
 </p>
+
 <p>Email:
  <%= current_user.email %>
 </p>

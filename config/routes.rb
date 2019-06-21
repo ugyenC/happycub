@@ -6,6 +6,9 @@ Rails.application.routes.draw do
       root to: "users#index"
     end
   get 'users/show'
+
+  #admin
+  #devise_for :admin, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts
   

@@ -1,5 +1,6 @@
 
 - if current_user
+
   = render 'layouts/container'
   %h3 News
   %hr.my-4/
@@ -7,5 +8,6 @@
     %p
       = link_to post.title, post
 - else
+
   = render 'layouts/jumbo'
-  %h1 Welcome To HappyClub
+  %h1 Welcome To Happy Club
