@@ -5,17 +5,18 @@ Rails.application.routes.draw do
 
       root to: "users#index"
     end
-  get 'users/show'
 
+  get 'users/show'
+  
   #admin
   #devise_for :admin, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'signup' }
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/sadmin', as: 'rails_admin'
   resources :posts
   
+
   devise_for :users
-  scope "/admin" do
-    resources :users
-  end
+  resources :users
+  
 
   get 'devise/profile'
   
@@ -29,5 +30,7 @@ Rails.application.routes.draw do
 
 
   match '/show', to: 'users#show' , via: 'get'
+  match 'dashboard', to: 'rails_admin/main#dashboard', via: 'get'
+
 
 end
