@@ -6,7 +6,10 @@
   %hr.my-4/
   - @posts.each do |post|
     %p
-      = link_to post.title, post
+      %b 
+        = post.title
+      = post.body.truncate_words(10)
+      = link_to "See More", post
 - else
 
   = render 'layouts/jumbo'
