@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Notifications::Engine => "/notifications"
+#  mount Notifications::Engine => "/notifications"
   namespace :admin do
       resources :users
       resources :posts
@@ -32,6 +32,7 @@ Rails.application.routes.draw do
 
   match '/show', to: 'users#show' , via: 'get'
   match 'dashboard', to: 'rails_admin/main#dashboard', via: 'get'
+  #match 'notifications', to: 'notifications/notifications#index', via: 'get'
 
 
 end
