@@ -3,7 +3,6 @@
 
 body {
     padding-top: 0px;
-    background: url("b.jpg") no-repeat center center fixed;
   }
 
 .form{
@@ -69,14 +68,37 @@ header,
 }
 
 .jumbotron {
-  padding: 2rem 1rem;
+  padding: 8rem 8rem;
   margin-bottom: 2rem;
-  margin: 6rem;
+  margin-top: 2rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
   background-color: #f7f7f9;
-  border-radius: 0.6rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+
+
+}
+.containerr{
+  padding: 6rem 6rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  background-color: #f7f7f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .navbar.bg-dark {
   background-color: #060606 !important;
-  border: 1px solid #282828;
+ 
+}
+
+.left{
+  float: left; 
+  width: 300px;
+  margin-right: 20px;
 }

@@ -1,16 +1,20 @@
 
 - if current_user
-
-  = render 'layouts/container'
-  %h3 News
-  %hr.my-4/
-  - @posts.each do |post|
-    %p
-      %b 
-        = post.title
-      = post.body.truncate_words(10)
-      = link_to "See More", post
+  .containerr
+    %h3 News
+    %hr.my-4/
+    %ul.list-group
+    - @posts.each do |post|
+      %li.list-group-item
+        %p
+          %b 
+            = post.title
+          = post.body.truncate_words(20).html_safe
+          = link_to "See More", post
+          %br 
+          %i Created on: 
+          = post.created_at 
 - else
 
-  = render 'layouts/jumbo'
-  %h1 Welcome To Happy Club
+  .containerr
+    %h1 Welcome To Happy Club

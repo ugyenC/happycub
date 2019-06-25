@@ -1,17 +1,19 @@
-.jumbotron
+.containerr
   %p
     %strong Title:
     = @post.title
   %hr.my-4/
   %p
-    = image_tag(@post.image)
+    = image_tag @post.image,size: "500x400"
   %hr.my-4/
   %p
-    = @post.body
+    = @post.body.html_safe
   %p
     %strong By:
     %i= @post.user.fname
-  - if current_user && current_user.admin
-    = link_to 'Edit', edit_post_path(@post)
     |
+    =@post.created_at
+  - if current_user && current_user.admin
+    = link_to 'Edit', edit_post_path(@post),class: "btn  btn-success"
+    = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn  btn-success"
   = link_to 'Back', root_path

@@ -1,8 +1,10 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
- 
- 
+  before_action :load_activities, only: [:index, :show, :new, :edit]
+
+
+
   # GET /posts
   # GET /posts.json
   def index
@@ -74,4 +76,9 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body ,:image)
     end
+    
+    def load_activities
+      @activities = PublicActivity::Activity.order('created_at DESC').limit(20)
+    end
+ 
 end

@@ -13,19 +13,26 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :title %>
+    <%= form.label :title_of_the_news %>
     <%= form.text_field :title , class:"form-control"%>
   </div>
 
   
-  <div class="form-group">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
 
   <div class="form-group">
-    <%= form.label :body %>
-    <%= form.text_area :body, class:"form-control" %>
+    
+  <% if post.image.attached? %>
+  <%= image_tag post.image, size: "100x100",class: "rounded-circle" %>
+  <% end %>
+  <br/>
+    <%= form.label :image %>
+    <%= form.file_field :image ,size: "100x100"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :details_of_the_news %>
+    <%= form.trix_editor :body %>
+    
   </div>
 
 
