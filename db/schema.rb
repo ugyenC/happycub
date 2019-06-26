@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_195305) do
+ActiveRecord::Schema.define(version: 2019_06_26_073111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,27 @@ ActiveRecord::Schema.define(version: 2019_06_24_195305) do
     t.index ["recipient_type", "recipient_id"], name: "index_activities_on_recipient_type_and_recipient_id"
     t.index ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
     t.index ["trackable_type", "trackable_id"], name: "index_activities_on_trackable_type_and_trackable_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "category_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "location"
+    t.integer "capacity"
+    t.boolean "allow_guests"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "guest_per_member"
+    t.integer "total_guests"
   end
 
   create_table "notifications", id: :serial, force: :cascade do |t|

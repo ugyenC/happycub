@@ -7,6 +7,6 @@ class User < ApplicationRecord
          :confirmable
   
   after_create :create_profile
-
+  has_many :events
  
 end
