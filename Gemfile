@@ -10,7 +10,7 @@ gem 'bootstrap-sass'
 gem 'simple_form', '~> 4.1'
 gem 'haml'
 gem 'rails_admin'
-gem "pundit"
+gem 'pundit'
 gem 'public_activity'
 gem 'trix-rails', require: 'trix'
 

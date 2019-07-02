@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :load_activities, only: [:index, :show, :new, :edit]
+  
+  after_action :send_mail, only: [:create]
+                                                    
 
 
 
@@ -65,6 +68,12 @@ class PostsController < ApplicationController
       format.html { redirect_to index_path, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def send_mail
+    @users=User.all
+    
+    PostMailer.post_email(@users).deliver
   end
 
   private
