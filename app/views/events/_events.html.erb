@@ -1,0 +1,11 @@
+
+<% @events.each do |event| %>
+    <li class="list-group-item">
+        <p><%= event.title %></p>
+        <%= link_to 'Show More', event %>
+        <% if current_user && current_user.admin %>
+            <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'New Event', new_event_path %>
+        <% end %>
+    </li>
+<% end %>

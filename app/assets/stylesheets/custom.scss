@@ -74,15 +74,26 @@ header,
 
 }
 .containerr{
-  padding: 6rem 6rem;
+  padding: 6rem 6rem 6rem 6rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
   margin-left: 10rem;
   margin-right: 10rem;
   background-color: #f0f0f0 !important;
-  
+  align-content: center;
   border-radius: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.containerr1{
+  padding: 6rem 6rem 6rem 6rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  background-color: #f0f0f0 !important;
+  align-content: center;
+  border-radius: 0.5rem;
 
 }
 
@@ -95,4 +106,32 @@ header,
   float: left; 
   width: 300px;
   margin-right: 20px;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #f0f0f0;
+  color: black;
+  float: left;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+
+  color: black;
+  display: none;
+  padding: 50px 20px;
+  height: 100%;
+  
+
 }

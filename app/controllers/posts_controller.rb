@@ -19,6 +19,9 @@ class PostsController < ApplicationController
   def show
   end
 
+  def admin_list
+    authorize Post
+  end
   # GET /posts/new
   def new
     @post = Post.new
@@ -31,8 +34,9 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post=Post.find(params[:id])
     @post.user= current_user
+    authorize @post
     respond_to do |format|
       if @post.save
         
@@ -48,6 +52,8 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    @post=Post.find(params[:id])
+    authorize @post
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -63,7 +69,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   
   def destroy
-    @post.destroy
+    @post= Post.find(params[:id])
+    authorize @post if @post.destroy
     respond_to do |format|
       format.html { redirect_to index_path, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
@@ -72,7 +79,6 @@ class PostsController < ApplicationController
 
   def send_mail
     @users=User.all
-    
     PostMailer.post_email(@users).deliver
   end
 

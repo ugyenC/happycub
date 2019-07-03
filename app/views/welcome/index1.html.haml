@@ -1,15 +1,5 @@
 
 - if current_user
-  =link_to  events_path do 
-    .containerr
-      .row
-        .col
-          %p Create Events 
-        .col
-          Hello
-  =link_to 'Manage Categories'
-
-
   .containerr
     %h3 News
     %hr.my-4/
@@ -21,9 +11,11 @@
             = post.title
           = post.body.truncate_words(20).html_safe
           = link_to "See More", post
+          = link_to "trial", asso_path
           %br 
           %i Created on: 
           = post.created_at 
+    
 - else
 
   .containerr

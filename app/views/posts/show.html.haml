@@ -13,7 +13,11 @@
     %i= @post.user.fname
     |
     =@post.created_at
-  - if current_user && current_user.admin
+  -if policy(@post).update?
     = link_to 'Edit', edit_post_path(@post),class: "btn  btn-success"
+  - if policy(@post).destroy? 
     = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn  btn-success"
+  - if policy(@post).create? 
+    = link_to "Create New", new_post_path ,class: "btn  btn-success"
+     
   = link_to 'Back', root_path

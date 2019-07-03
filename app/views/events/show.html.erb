@@ -30,13 +30,23 @@
 </p>
 
 <p>
-  <strong>Allow guests:</strong>
-  <%= @event.allow_guests %>
+  <strong>Allow guests?</strong>
+  <% if @event.allow_guests == true %>
+    Yes
+  <% else %>
+    No
+  <% end %>
 </p>
 
-
-
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
+<% if current_user && current_user.admin %>
+  <% if @event.start_date> Date.today %>
+    <%= link_to 'Edit', edit_event_path(@event) %>|
+  <% end %>
+<% else %>
+  <% if @event.start_date > Date.today %>
+    <%= link_to "Register", class: "btn btn-success"%>
+  <% end %>
+<% end %>
 <%= link_to 'Back', events_path %>
+
 </div>

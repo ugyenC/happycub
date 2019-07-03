@@ -13,8 +13,8 @@ gem 'rails_admin'
 gem 'pundit'
 gem 'public_activity'
 gem 'trix-rails', require: 'trix'
-
-
+gem 'simple-navigation'
+gem 'tabs_on_rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record

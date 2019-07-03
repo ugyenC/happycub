@@ -16,7 +16,8 @@
     
     <%= f.input :location %>
     <%= f.input :capacity %>
-    <%= f.input :allow_guests, as: :radio_buttons %>
+    <%= f.collection_radio_buttons :allow_guests, [[false,'No '], [true,'Yes']],:first, :last %>
+
     <%= f.input :guest_per_member, as: :hidden %>
     <%= f.input :total_guests, as: :hidden %>
    
