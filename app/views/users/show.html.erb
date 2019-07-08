@@ -1,35 +1,40 @@
-<div class="jumbotron">
-<% if current_user %>
+<div class="content">
+<div class="container-fluid">
+  <div class="card col-sm-offset-1">
+    <% if current_user %>
 
-<% if current_user.avatar.attached? %>
- <%= image_tag current_user.avatar, size: "100x100", class: "rounded-circle" %>
-<% else %>
-<%= gravatar_image_tag(current_user.email) %>
-<% end %>
+      <div class="col-md-5">
+      <% if current_user.avatar.attached? %>
+        <%= image_tag current_user.avatar, size: "300x300", class: "rounded-circle" %>
+      <% else %>
+        <%= gravatar_image_tag(current_user.email) %>
+      <% end %>
+      </div>
+      <div class="col-md-7">
+        <p> Name:
+          <%=  current_user.fname.capitalize! %>
+          <%= current_user.lname.capitalize! %>
+        </p>
 
+        <p> Gender:
+          <% if current_user.is_female == false %>
+            Male
+          <% else %>
+            Female
+          <% end %>
+        </p>
 
-<p> Name:  
-   <%=  current_user.fname.capitalize! %>
-   <%= current_user.lname.capitalize! %>
-</p>
+        <p>Date of birth:
+          <%= current_user.date_of_birth %>
+        </p>
 
-<p> Gender:  
-   <% if current_user.is_female == false %>
-     Male
-   <% else %>
-     Female
-   <% end %>
-</p>
+        <p>Email:
+          <%= current_user.email %>
+        </p>
+    <% end %>
 
-<p>Date of birth:
- <%= current_user.date_of_birth %>
-</p>
-
-<p>Email:
- <%= current_user.email %>
-</p>
-
-<% end %>
-<%= link_to 'Edit Profile', edit_user_registration_path, class: "btn  btn-primary" %>
-
+    <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn  btn-primary" %>
+    </div>
+  </div>
+</div>
 </div>

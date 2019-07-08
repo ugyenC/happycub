@@ -1,0 +1,46 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card striped-tabled-with-hover">
+          <div class="card-header ">
+            <h4 class="card-title">News</h4>
+            <p class="card-category">Here is a subtitle for this table</p>
+          </div>
+          <div class="card-body table-full-width table-responsive">
+            <table class="table table-hover table-striped">
+              <thead>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Created On</th>
+              <th>Updated On</th>
+              <th>Actions</th>
+              </thead>
+              <tbody>
+              <% @news.each do |n| %>
+                <tr>
+
+                  <td class="count"></td>
+                  <td><%=n.title %></td>
+                  <td><%=n.body %></td>
+                  <td><%=n.created_at %></td>
+                  <td><%=n.updated_at %></td>
+                  <td>
+                    <%= link_to 'Edit', edit_post_path(n), class: "btn" %>
+                    <%= link_to 'Delete', n, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+                  </td>
+
+
+                </tr>
+              <%end %>
+              </tbody>
+            </table>
+            <%=link_to "Create New",new_post_path, class: "btn" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

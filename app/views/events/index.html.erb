@@ -1,16 +1,29 @@
-<div class="containerr">
-<h1>Events</h1>
-    <% @events.each do |event| %>
-     
-         <li class="list-group-item">
-         <p><%= event.title %></p>
-         <%= link_to 'Show More', event %>
-         <% if current_user && current_user.admin %>
-             <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
-             <%= link_to 'New Event', new_event_path %>
-         <% end %>
-     </li>
-     
-  <% end %>
-  </ul>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "form.js" %>
+<% end %>
+<div class="content">
+  <div class="container-fluid">
+    <div class="card">
+
+        <div class="col-sm-4 col-sm-offset-3">
+  <button class="tablinks" onclick="openPage('past', this, 'gray')">Past</button>
+  <button class="tablinks" onclick="openPage('current', this, 'gray')" >Current</button>
+  <button class="tablinks" onclick="openPage('upcoming', this, 'gray')" >Upcoming</button>
+
+      </div>
+  <div id="past" class="tabcontent">
+    <%= render partial: "shared/events", object: @previous %>
+
+  </div>
+
+  <div id="current" class="tabcontent">
+    <%= render partial: "shared/events", object: @current %>
+  </div>
+  <div id="upcoming"  class="tabcontent">
+    <%= render partial: "shared/events", object: @upcoming %>
+  </div>
+
+
+</div>
+  </div>
 </div>

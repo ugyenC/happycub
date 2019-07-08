@@ -1,23 +1,25 @@
-.containerr
-  %p
-    %strong Title:
-    = @post.title
-  %hr.my-4/
-  %p
-    = image_tag @post.image,size: "500x400"
-  %hr.my-4/
-  %p
-    = @post.body.html_safe
-  %p
-    %strong By:
-    %i= @post.user.fname
-    |
-    =@post.created_at
-  -if policy(@post).update?
-    = link_to 'Edit', edit_post_path(@post),class: "btn  btn-success"
-  - if policy(@post).destroy? 
-    = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn  btn-success"
-  - if policy(@post).create? 
-    = link_to "Create New", new_post_path ,class: "btn  btn-success"
-     
-  = link_to 'Back', root_path
+.content
+  .container-fluid
+    .card
+
+    %h3
+      = @post.title
+    %hr.my-4/
+    %div
+      .col-md-6
+        = image_tag @post.image,size: "400x400"
+      .col-md-6
+        = @post.body.html_safe
+        %strong By:
+        %i= @post.user.fname
+        |
+        =@post.created_at
+    %hr.my-4/
+    -if policy(@post).update?
+      = link_to 'Edit', edit_post_path(@post),class: "btn  btn-success"
+    - if policy(@post).destroy?
+      = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn  btn-danger"
+    - if policy(@post).create?
+      = link_to "Create New", new_post_path ,class: "btn  btn-primary"
+
+    = link_to 'Back', posts_path

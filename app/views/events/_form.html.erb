@@ -1,27 +1,22 @@
-
-
 <%= simple_form_for(@event) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.label :category %>
-    <%= select_tag(:category_id, options_for_select(@categories)) %>
+  <div class="form-group">
+    <%= f.input :title ,class: "form-control"%>
+  </div>
 
-    <div class="date">
-    <%= f.input :start_date %>
-    </div>
-    <%= f.input :end_date %>
-    
-    <%= f.input :location %>
-    <%= f.input :capacity %>
-    <%= f.collection_radio_buttons :allow_guests, [[false,'No '], [true,'Yes']],:first, :last %>
+  <div class="date">
+    <%=f.label :start_date %>
+    <%= f.datetime_select :start_date, class:"form-control" %>
+  </div>
+
+    <%= f.input :location ,class:"form-control" %>
+    <%= f.input :capacity ,class:"form-control" %>
+    <%#= f.collection_radio_buttons :allow_guests, [[false,'No '], [true,'Yes']],:first, :last %>
 
     <%= f.input :guest_per_member, as: :hidden %>
     <%= f.input :total_guests, as: :hidden %>
-   
-  </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
