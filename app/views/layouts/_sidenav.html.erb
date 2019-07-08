@@ -1,0 +1,44 @@
+<div class="sidebar" >
+<div class="sidebar-wrapper">
+  <ul class="nav">
+    <li class="nav-item ">
+      <p><%= link_to "", root_path ,class: "nav-link"%></p>
+    </li>
+
+
+    <li class="nav-item active">
+      <p><%= link_to "Dashboard", root_path ,class: "nav-link"%></p>
+    </li>
+
+    <li>
+
+         <%= link_to "User Profile", show_path, class: "nav-link"%>
+    </li>
+
+    <li>
+      <%= link_to "News", posts_path, class: "nav-link"%>
+    </li>
+
+    <li>
+      <%= link_to "Events", events_path, class: "nav-link"%>
+    </li>
+
+    <% if current_user && current_user.admin? %>
+      <li>
+          <%= link_to "Manage News", news_path, class: "nav-link"%>
+      </li>
+
+      <li>
+        <%= link_to "Manage Events", eventshow_path	, class: "nav-link"%>
+      </li>
+
+      <li>
+        <%= link_to "Manage users", usershow_path, class: "nav-link"%>
+      </li>
+    <%end %>
+
+
+
+  </ul>
+</div>
+</div>

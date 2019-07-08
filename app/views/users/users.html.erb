@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card striped-tabled-with-hover">
+          <div class="card-header ">
+            <h4 class="card-title">Users</h4>
+            <p class="card-category">Here is a subtitle for this table</p>
+          </div>
+          <div class="card-body table-full-width table-responsive">
+            <table class="table table-hover table-striped">
+              <thead>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Birth Day</th>
+              <th>Gender</th>
+              <th>Email</th>
+              <th>Action</th>
+
+              </thead>
+              <tbody>
+              <% @user.each do |u| %>
+                <tr>
+
+                  <td class="count"></td>
+                  <td><%=u.fname %></td>
+                  <td><%=u.lname %></td>
+                  <td><%=u.date_of_birth %></td>
+                  <td><%=u.is_female %></td>
+                  <td><%=u.email %></td>
+                  <td>
+                    <%= link_to 'Edit', class: "btn" %>
+                    <%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
+                  </td>
+
+                </tr>
+              <%end %>
+              </tbody>
+            </table>
+            <%=link_to "Create New", class: "btn" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

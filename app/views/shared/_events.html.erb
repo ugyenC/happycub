@@ -1,0 +1,16 @@
+<ul class="list-group">
+  <% events.each do |e| %>
+    <li class="list-group-item">
+      <h3>
+        <%=link_to e.title, event_path(e) %>
+      </h3>
+      <P>
+        <%=  e.readable_date %>
+      </P>
+      <p>
+        <%= e.location %>
+      </p>
+
+    </li>
+  <% end %>
+</ul>

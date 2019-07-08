@@ -9,9 +9,19 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
 
+  <div class="wrapper">
+    <% if current_user %>
+    <%= render 'layouts/sidenav' %>
+
+
+    <div class="main-panel">
+    <% end %>
+    <%= render 'layouts/header' %>
     <%= render 'layouts/alert' %>
-    <%= yield %>
+          <%= yield %>
+
+    </div>
+  </div>
   </body>
 </html>

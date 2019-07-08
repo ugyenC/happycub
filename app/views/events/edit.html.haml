@@ -1,6 +1,9 @@
-%h1 Editing Event
+.content
+  .container-fluid
+    .card
+      %h1 Editing Event
 
-= render 'form', event: @event 
+      = render 'form', event: @event
 
-= link_to 'Show', @event  |
-= link_to 'Back', events_path 
+      = link_to 'Show', @event  |
+      = link_to 'Back', events_path

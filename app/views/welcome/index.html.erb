@@ -1,53 +1,11 @@
-<% content_for :javascript_includes do %>
-    <%= javascript_include_tag "form.js" %>
-<% end %>
+
 
 <div class="containerr">
-<% if current_user %>
-
-<button class="tablink" onclick="openPage('News', this, 'gray')">News</button>
-<button class="tablink" onclick="openPage('Events', this, 'gray')" id="defaultOpen">Events</button>
-
-<div id="News" class="tabcontent">
- 
-  
-   
-    <ul class="list-group"></ul>
-    <% @posts.each do |post| %>
-      <li class="list-group-item">
-        <p>
-          <b>
-            <%= post.title %>
-          </b>
-          <%= post.body.truncate_words(20).html_safe %>
-          <%= link_to "See More", post %>
-          <br/>
-          <i>Created on: </i>
-          <%= post.created_at  %>
-        </p>
-      </li>
-    <% end %>
- 
- 
-
-  
-</div>
-
-<div id="Events" class="tabcontent">
-  <div class="containerr1">
-  <button class="tablink" onclick="openPage('Past', this, 'gray')">Past</button>
-  <button class="tablink" onclick="openPage('Current', this, 'gray')">Current</button>
-  <button class="tablink" onclick="openPage('Upcoming', this, 'gray')">Upcoming</button>
-
-  
-  </div>
-
-</div>
-
-</div>
+   <% if current_user %>
+    <p>hhh</p>
 <% else %>
-
-  <h1>Welcome To Happy Club</h1>
-
+    <div class="container">
+    <h1>Welcome To Happy Club</h1>
+    </div>
 <% end %>
 </div>

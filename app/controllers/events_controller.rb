@@ -5,7 +5,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @upcoming = Event.upcoming
+    @previous = Event.previous
+    @current = Event.current
   end
 
   # GET /events/1
@@ -23,6 +25,10 @@ class EventsController < ApplicationController
   def edit
   end
 
+  def events
+    @events = Event.all
+  end
+
   # POST /events
   # POST /events.json
   def create
@@ -30,7 +36,7 @@ class EventsController < ApplicationController
     @event.category_id = params[:category_id] 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: 'Event was successfully created.'}
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -39,6 +45,10 @@ class EventsController < ApplicationController
     end
   end
 
+  def registered
+    @register = Register.new
+    @register.save
+  end
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update

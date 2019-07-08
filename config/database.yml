@@ -24,8 +24,8 @@ default: &default
 development:
   <<: *default
   database: happyclubdb
-  username: happyproj
-  password: 1234
+  username: <%= ENV.fetch("HAPPYCLUB_USERNAME") %>
+  password: <%= ENV.fetch("HAPPYCLUB_PASSWORD") %>
   host: localhost
   port: 5432
 
