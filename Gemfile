@@ -2,16 +2,16 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
+gem 'jquery-rails'
 
-
-gem 'bootstrap-sass'
 # devise
 gem 'devise'
 gem 'dotenv-rails'
 gem 'font-awesome-rails'
 gem 'haml'
 gem 'simple_form', '~> 4.1'
-
 gem 'rails_admin'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -23,6 +23,7 @@ gem 'public_activity'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'pundit'
+gem 'clearance'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -67,6 +68,7 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', require: false
+  gem 'rails-controller-testing'
 end
 
 group :development do

@@ -1,13 +1,15 @@
-<ul class="list-group">
+<ul class="list-group ">
   <% events.each do |e| %>
-    <li class="list-group-item">
+    <li class="list-group-item event-list">
       <h3>
         <%=link_to e.title, event_path(e) %>
       </h3>
       <P>
-        <%=  e.readable_date %>
+        <i class="fa fa-clock-o"></i>
+        <%=  e.readable_start_date %>
       </P>
       <p>
+        <i class="fa fa-map-marker"></i>
         <%= e.location %>
       </p>
 

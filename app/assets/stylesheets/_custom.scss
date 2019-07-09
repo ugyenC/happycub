@@ -12,9 +12,12 @@ body,html,.body{
 
 
 }
+
+.event-list{
+  margin-bottom: 30px;
+}
 .navbar{
   background: #f5f5f5;
-  border: solid 1px beige;
 }
 
 .my-4{
@@ -62,15 +65,15 @@ body{
   }
 
 
-  p {
+p{
     color: #1b1b1b;
     font-size: 1.1em;
     line-height: 1.7em;
-  }
+}
 
 h1,h2{
   text-align: center;
-  color: #f7f7f7 !important;
+  color: #000000 !important;
   font-family: "Comic Sans MS ", cursive, Sans-Serif !important;
 }
 html,
@@ -154,4 +157,13 @@ table{
 .container{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: 0.7;
+}
+.rounded-circle{
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  display: block;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
 }

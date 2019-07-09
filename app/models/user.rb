@@ -5,9 +5,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :confirmable
-  after_create :create_profile
-  has_many :registers
+
+  has_many :registers, inverse_of: :user
   has_many :events, through: :registers
+  has_many :posts, inverse_of: :user
+
   def full_name
     [fname, lname].reject(&:blank?).map(&:capitalize).join(' ')
   end

@@ -17,7 +17,6 @@ class RegistersController < ApplicationController
   def show; end
 
   def create
-
     @register = Register.new(register_params)
     if @register.save
       redirect_to event_path(@register[:event_id])

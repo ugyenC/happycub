@@ -25,8 +25,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.admin == true
-
+    user.admin?
   end
   
 end
