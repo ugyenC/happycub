@@ -2,13 +2,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :registers
   resources :events
-
-  # resources :events do
-  #   resources :registers
-  #   match '/registers', to: 'registers#create', via: 'post', as: :create
-  # end
-
-
+  post 'create_user' => 'users#new' ,as: :create_user
   namespace :admin do
     resources :users
     resources :posts
@@ -18,7 +12,7 @@ Rails.application.routes.draw do
   get 'users/show'
   mount RailsAdmin::Engine => '/sadmin', as: 'rails_admin'
   resources :posts
-  devise_for :users
+  devise_for :users, :path_prefix => 'my'
   resources :users
   root to: 'welcome#index'
 
@@ -35,6 +29,9 @@ Rails.application.routes.draw do
   match '/eventshow', to: 'events#events', via: 'get'
   match '/news', to: 'posts#news', via: 'get'
   match '/usershow', to: 'users#users', via: 'get'
+
+
+
 
 
 end

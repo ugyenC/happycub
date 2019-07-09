@@ -1,7 +1,5 @@
-class EventsController < ApplicationController
+class EventsController < BaseController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  
-
   # GET /events
   # GET /events.json
   def index
@@ -18,11 +16,13 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    @event.valid?
     @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /events/1/edit
   def edit
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   def events
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @event = Event.new(event_params)
-    @event.category_id = params[:category_id] 
+    # @event.category_id = params[:category_id]
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.'}
@@ -81,6 +81,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :category_id, :start_date, :end_date, :location, :capacity, :allow_guests)
+      params.require(:event).permit(:title,:start_date,:end_date,:location, :capacity, :description, :post_image)
     end
 end

@@ -3,15 +3,11 @@
   <div class="card">
   <%= simple_form_for @register, url: '/registers' , method: :post do |f| %>
       <%= f.label @register.event.title %><br/>
-     <%= f.label current_user.fname  %>&emsp;<%=f.label current_user.lname %>
-     <%= f.hidden_field :user_id, :value => current_user.id %>
-     <%= f.hidden_field :event_id, :value => @register.event.id %>
-
-    <p>Guest</p>
-
-
-    <%# @register.guests.each do | guest |  %>
-    <%= f.simple_fields_for :guests do |g| %>
+      <%= f.label current_user.fname  %>&emsp;<%=f.label current_user.lname %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :event_id, :value => @register.event.id %>
+      <p>Guest</p>
+      <%= f.simple_fields_for :guests do |g| %>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6">
@@ -24,22 +20,15 @@
             </div>
           </div>
         </div>
-
-    <div class="form-group">
-      <%= g.label :age %><br/>
-      <%= g.text_field :age, autofocus: true ,class: "form-control"%>
-    </div>
+        <div class="form-group">
+          <%= g.label :age %><br/>
+          <%= g.text_field :age, autofocus: true ,class: "form-control"%>
+        </div>
     <% end %>
-    <%# end %>
-
-<!--    <div>-->
-      <%#= f.button :add_guest, "Add Guest"%>
-<!--    </div>-->
-
-    <div class="form-action">
-      <%=f.submit "Register" %>
-    </div>
-  <% end %>
-</div>
+      <div class="form-action">
+        <%=f.submit "Register" %>
+      </div>
+    <% end %>
+  </div>
 </div>
 </div>

@@ -7,9 +7,9 @@
     %hr.my-4/
     %div
       .col-md-6
-        = image_tag @post.image,size: "400x400"
+        = image_tag @post.image,size: "300x300"
       .col-md-6
-        = @post.body.html_safe
+        = sanitize @post.body.html_safe
         %strong By:
         %i= @post.user.fname
         |

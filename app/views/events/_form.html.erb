@@ -1,22 +1,39 @@
 <%= simple_form_for(@event) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-group">
     <%= f.input :title ,class: "form-control"%>
   </div>
 
-  <div class="date">
-    <%=f.label :start_date %>
-    <%= f.datetime_select :start_date, class:"form-control" %>
+  <div class="form-group">
+  <%= f.file_field :post_image %>
   </div>
 
-    <%= f.input :location ,class:"form-control" %>
-    <%= f.input :capacity ,class:"form-control" %>
-    <%#= f.collection_radio_buttons :allow_guests, [[false,'No '], [true,'Yes']],:first, :last %>
+  <div class="form-group">
+    <div class="date">
+      <%=f.label :start_date %>
+      <%= f.datetime_select :start_date, class:"form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="date">
+      <%=f.label :end_date %>
+      <%= f.datetime_select :end_date, class:"form-control" %>
+    </div>
+  </div>
 
-    <%= f.input :guest_per_member, as: :hidden %>
-    <%= f.input :total_guests, as: :hidden %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <%= f.input :location ,class:"form-control" %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :capacity ,class:"form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.trix_editor :description %>
+  </div>
+    <%#= f.collection_radio_buttons :allow_guests, [[false,'No '], [true,'Yes']],:first, :last %>
 
   <div class="form-actions">
     <%= f.button :submit %>

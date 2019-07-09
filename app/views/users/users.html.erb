@@ -4,8 +4,10 @@
       <div class="col-md-12">
         <div class="card striped-tabled-with-hover">
           <div class="card-header ">
+            <% flash.each do |key, value| %>
+              <%= content_tag :div, value, class: "flash #{key}" %>
+            <% end %>
             <h4 class="card-title">Users</h4>
-            <p class="card-category">Here is a subtitle for this table</p>
           </div>
           <div class="card-body table-full-width table-responsive">
             <table class="table table-hover table-striped">
@@ -27,10 +29,16 @@
                   <td><%=u.fname %></td>
                   <td><%=u.lname %></td>
                   <td><%=u.date_of_birth %></td>
-                  <td><%=u.is_female %></td>
+                  <td>
+                    <% if u.is_female? %>
+                      Female
+                    <%else %>
+                      Male
+                    <%end %>
+                  </td>
                   <td><%=u.email %></td>
                   <td>
-                    <%= link_to 'Edit', class: "btn" %>
+                    <%= link_to 'Edit',edit_user_path(id: u.id),class: "btn" %>
                     <%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn" %>
                   </td>
 
@@ -38,7 +46,7 @@
               <%end %>
               </tbody>
             </table>
-            <%=link_to "Create New", class: "btn" %>
+            <%=link_to "Create New",create_user_path, class: "btn" %>
           </div>
         </div>
       </div>

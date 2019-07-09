@@ -5,25 +5,30 @@
   <div class="container-fluid">
     <div class="card">
 
-        <div class="col-sm-4 col-sm-offset-3">
-  <button class="tablinks" onclick="openPage('past', this, 'gray')">Past</button>
-  <button class="tablinks" onclick="openPage('current', this, 'gray')" >Current</button>
-  <button class="tablinks" onclick="openPage('upcoming', this, 'gray')" >Upcoming</button>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" href="#p" role="tab" data-toggle="tab">Past</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#c" role="tab" data-toggle="tab">Current</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#u" role="tab" data-toggle="tab">Upcoming</a>
+        </li>
+      </ul>
 
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade" id="p">
+          <%= render partial: "shared/events", object: @previous %>
+        </div>
+        <div role="tabpanel" class="tab-pane fade in active" id="c">
+          <%= render partial: "shared/events", object: @current %>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="u">
+          <%= render partial: "shared/events", object: @upcoming %>
+        </div>
       </div>
-  <div id="past" class="tabcontent">
-    <%= render partial: "shared/events", object: @previous %>
-
-  </div>
-
-  <div id="current" class="tabcontent">
-    <%= render partial: "shared/events", object: @current %>
-  </div>
-  <div id="upcoming"  class="tabcontent">
-    <%= render partial: "shared/events", object: @upcoming %>
-  </div>
-
-
 </div>
   </div>
 </div>

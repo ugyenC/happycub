@@ -5,8 +5,6 @@ class PostsController < ApplicationController
   after_action :send_mail, only: [:create]
                                                     
 
-
-
   # GET /posts
   # GET /posts.json
   def index
@@ -36,7 +34,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post=Post.find(params[:id])
+   # @post=Post.find(params[:id])
+    @post = Post.new(post_params)
     @post.user= current_user
     authorize @post
     respond_to do |format|
@@ -74,14 +73,16 @@ class PostsController < ApplicationController
     @post= Post.find(params[:id])
     authorize @post if @post.destroy
     respond_to do |format|
-      format.html { redirect_to index_path, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to posts_path, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   def send_mail
     @users=User.all
-    PostMailer.post_email(@users).deliver
+    @users.each do |u|
+      PostMailer.post_email(u).deliver_later
+    end
   end
 
   private
@@ -92,7 +93,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body ,:image)
+      params.require(:post).permit(:title, :body )
     end
     
     def load_activities

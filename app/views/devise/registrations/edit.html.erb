@@ -11,7 +11,7 @@
             <div class="form-group">
               <%= f.label :profile_picture %><br/>
               <% if resource.avatar.attached? %>
-                <%= image_tag resource.avatar, size: "200x200",class: "rounded-circle" %><br/>
+                <%= image_tag resource.avatar, size: "200x200" %><br/>
               <% else %>
                 <%= gravatar_image_tag(current_user.email) %>
               <% end %>
