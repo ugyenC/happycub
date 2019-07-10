@@ -46,10 +46,7 @@
   </div>
 
   <% if @event.start_date > Date.today %>
-    <% if current_user.admin? %>
-      <%= link_to 'Edit', edit_event_path(@event) %>|
-    <% else %>
-      <%if @event.attended_by(current_user.id, @event) %>
+    <%if @event.attended_by(current_user.id, @event) || current_user.admin? %>
         <div class="row">
           <div class="col-md-6">
             <h4><i class="fa fa-list"></i>Users Attending</h4>
@@ -58,12 +55,10 @@
                 <li class="list-group-item">
                   <p><%=  u.full_name %> </p>
                 </li>
-
               <%end %>
             </ul>
-
-
           </div>
+
           <div class="col-md-6">
             <h4>Guest Attendees</h4>
             <ul class="list-group">
@@ -76,18 +71,19 @@
               <% end %>
             </ul>
           </div>
-          <%= link_to "Cancel" ,register_path(event_id: @event.id),class:"btn btn-danger", method: :delete%>
+          <% if current_user.admin? %>
+            <%= link_to 'Edit', edit_event_path(@event) %>|
+          <%else %>
+            <%= link_to "Cancel" ,register_path(event_id: @event.id),class:"btn btn-danger", method: :delete%>
+          <% end %>
+    <% else %>
+      <% if @event.capacity > @event.users.count  %>
+        <%= link_to "Register",  new_register_path(user_id: current_user.id, event_id: @event.id, allow_guest: @event.allow_guests)	%>
       <% else %>
-        <% if @event.capacity > @event.users.count  %>
-          <%= link_to "Register",  new_register_path(user_id: current_user.id, event_id: @event.id, allow_guest: @event.allow_guests)	%>
-        <% else %>
-          <p>User Capacity is full.</p>
-        <% end %>
-        <%end %>
-    <% end %>
+        <p>User Capacity is full.</p>
+      <% end %>
+    <%end %>
   <% end %>
-
-
     <%=link_to 'Back', events_path, class: "btn" %>
   </div>
 </div>

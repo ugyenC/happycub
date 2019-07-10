@@ -30,7 +30,7 @@ class Event < ApplicationRecord
   end
 
   def self.current
-    where('start_date < ?', Date.today).where('end_date > ?' , Date.today)
+    where('start_date < ?', DateTime.current).where('end_date > ?' , DateTime.current)
   end
 
 end

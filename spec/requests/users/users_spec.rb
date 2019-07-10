@@ -14,7 +14,8 @@ RSpec.describe UsersController, type: :controller do
 
     it 'should delete a user and display a success notice' do
       expect { delete :destroy, params: { id: post.id } }
-      #expect(flash[:notice]).to eq 'News successfully removed.'
+      user.reload
+      #expect(flash[:success]).to eq 'News successfully removed.'
     end
 
   end

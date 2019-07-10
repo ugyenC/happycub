@@ -19,7 +19,7 @@ class UsersController < BaseController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = "User #{@user.fname} successfully edited."
+      flash[:success] = "User successfully edited."
       redirect_to usershow_path
     else
       flash.now[:error] = "User #{@user.fname} not edited."
@@ -32,7 +32,7 @@ class UsersController < BaseController
     @user.destroy
 
     if @user.destroy
-      flash[:success] = "User #{@user.fname} successfully deleted."
+      flash[:success] = "User successfully deleted."
       redirect_to usershow_path
     else
       flash.now[:error] = "User not deleted"
