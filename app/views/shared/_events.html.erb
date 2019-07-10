@@ -4,15 +4,17 @@
       <h3>
         <%=link_to e.title, event_path(e) %>
       </h3>
-      <P>
-        <i class="fa fa-clock-o"></i>
+      <P>Start Date:<br/>
         <%=  e.readable_start_date %>
+      </P>
+      <P>
+        End Date:<br/>
+        <%=  e.readable_end_date %>
       </P>
       <p>
         <i class="fa fa-map-marker"></i>
         <%= e.location %>
       </p>
-
     </li>
   <% end %>
 </ul>

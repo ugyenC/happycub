@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < BaseController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :load_activities, only: [:index, :show, :new, :edit]
@@ -73,7 +73,7 @@ class PostsController < ApplicationController
     @post= Post.find(params[:id])
     authorize @post if @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_path, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to news_path, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -93,7 +93,7 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body )
+      params.require(:post).permit(:title, :body ,:image)
     end
     
     def load_activities

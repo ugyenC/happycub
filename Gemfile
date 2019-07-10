@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
 gem 'jquery-rails'
 
 # devise
@@ -23,7 +22,7 @@ gem 'public_activity'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'pundit'
-gem 'clearance'
+#gem 'clearance'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
