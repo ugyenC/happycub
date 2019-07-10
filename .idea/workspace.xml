@@ -2,203 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0f5c369-a3ac-4cba-98fb-a7ecf325def0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/models/booking.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/bookings.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/factories/guests.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/booking_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spec/requests/bookings/bookings_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/registers.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/bookings.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/_light-bootsrap-dashboard.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/_light-bootsrap-dashboard.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/registers.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/bookings.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/registers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/registers_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/bookings_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/event.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/event.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/guest.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/guest.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/register.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/events/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/events/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/registers/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/bookings/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/registers/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/bookings/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/registers/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/bookings/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190704104222_create_guests.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190704104222_create_guests.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/css/animate.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/css/light-bootstrap-dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/css/pe-icon-7-stroke.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/fonts/Pe-icon-7-stroke.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/fonts/Pe-icon-7-stroke.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/fonts/Pe-icon-7-stroke.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/fonts/Pe-icon-7-stroke.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/default-avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/face-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/faces/tim_vector.jpe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/full-screen-image-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/loading-bubbles.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/new_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/sidebar-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/sidebar-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/sidebar-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/sidebar-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/sidebar-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/img/tim_80x80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/bootstrap-notify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/bootstrap-select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/chartist.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/jquery.3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/js/light-bootstrap-dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_alerts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_checkbox-radio-switch.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_footers.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_inputs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_misc.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_navbars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_sidebar-and-main-panel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_inputs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_labels.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_morphing-buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_navbars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_social-buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_tabs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_transparency.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/lbd/mixins/_vendor-prefixes.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/assets/sass/light-bootstrap-dashboard.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/documentation/css/documentation.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/documentation/tutorial-components.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/maps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/notifications.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/typography.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/upgrade.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/BS3/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/css/light-bootstrap-dashboard.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/fonts/nucleo-icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/fonts/nucleo-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/fonts/nucleo-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/fonts/nucleo-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/fonts/nucleo-icons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/apple-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/default-avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/face-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/faces/tim_vector.jpe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/full-screen-image-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/loading-bubbles.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/mask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/new_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/sidebar-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/sidebar-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/sidebar-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/sidebar-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/sidebar-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/img/tim_80x80.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/core/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/core/jquery.3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/core/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/demo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/light-bootstrap-dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/plugins/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/plugins/bootstrap-notify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/plugins/bootstrap-switch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/plugins/chartist.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/js/plugins/nouislider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_alerts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_bootstrap-switch.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_checkbox-radio-switch.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_footers.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_inputs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_misc.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_navbars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_partial-nucleo-icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_sidebar-and-main-panel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_cards.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_inputs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_labels.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_morphing-buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_navbars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_social-buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_tabs.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_transparency.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/mixins/_vendor-prefixes.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/plugins/_animate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/lbd/plugins/_datetime-picker.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/assets/sass/light-bootstrap-dashboard.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/documentation/template.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/documentation/tutorial-components.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/icons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/maps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/notifications.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/table.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/typography.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/upgrade.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/theme/examples/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/event_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/event_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/guest_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/guest_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/post_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/post_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/registers.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/bookings.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -239,11 +43,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="409">
               <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -276,15 +89,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/guest.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -334,7 +138,6 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/posts_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" />
         <option value="$PROJECT_DIR$/config/initializers/clearance.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20190710042120_add_clearance_to_users.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/events/events.html.erb" />
@@ -372,6 +175,7 @@
         <option value="$PROJECT_DIR$/spec/factories/bookings.rb" />
         <option value="$PROJECT_DIR$/spec/factories/guests.rb" />
         <option value="$PROJECT_DIR$/spec/requests/bookings/bookings_spec.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -586,12 +390,12 @@
       <workItem from="1562645508264" duration="38947000" />
       <workItem from="1562724146475" duration="1581000" />
       <workItem from="1562726121786" duration="536000" />
-      <workItem from="1562732070014" duration="17477000" />
+      <workItem from="1562732070014" duration="18109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221730000" />
+    <option name="totallyTimeSpent" value="222362000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -668,13 +472,6 @@
     <SUITE FILE_PATH="coverage/happyclub@Development__happyclub.rcov" NAME="Development: happyclub Coverage Results" MODIFIED="1562221322912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="happyclub" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/base_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/categories_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -988,6 +785,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="93" column="12" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
         </state>
       </provider>
     </entry>
