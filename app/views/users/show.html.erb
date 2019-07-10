@@ -1,6 +1,7 @@
-<div class="content">
-<div class="container-fluid">
-  <div class="card col-md-4">
+<div class="containerr">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-4 well">
     <% if current_user %>
       <% if current_user.avatar.attached? %>
         <%= image_tag current_user.avatar, size: "300x300", class: "rounded-circle" %>
@@ -18,7 +19,7 @@
           Female
         <% end %>
       </p>
-      <p>Date of birth:
+      <p>Birthday:
         <%= current_user.date_of_birth %>
       </p>
       <p>Email:

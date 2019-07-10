@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class RegistersController < ApplicationController
+class RegistersController < BaseController
 
   def index
     @guest = Guest.all

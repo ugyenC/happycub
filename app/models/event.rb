@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
 
   has_one_attached :post_image
-  has_many :registers, inverse_of: :event
+  has_many :registers, inverse_of: :event, dependent: :destroy
   has_many :users, through: :registers
 
   validates :title, presence: true
@@ -26,11 +26,11 @@ class Event < ApplicationRecord
   end
 
   def self.previous
-    where('start_date < ?', DateTime.current)
+    where('end_date < ?',DateTime.current)
   end
 
   def self.current
-    where('start_date = ?', Date.today)
+    where('start_date < ?', Date.today).where('end_date > ?' , Date.today)
   end
 
 end

@@ -29,9 +29,4 @@ Rails.application.routes.draw do
   match '/eventshow', to: 'events#events', via: 'get'
   match '/news', to: 'posts#news', via: 'get'
   match '/usershow', to: 'users#users', via: 'get'
-
-
-
-
-
 end

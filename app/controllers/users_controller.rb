@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class UsersController < BaseController
   def show
 
   end
@@ -48,6 +48,7 @@ class UsersController < ApplicationController
       :date_of_birth,
       :is_female?,
       :email,
+      :avatar
     )
   end
   def authorize_admin
