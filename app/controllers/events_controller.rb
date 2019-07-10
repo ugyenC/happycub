@@ -46,8 +46,8 @@ class EventsController < BaseController
   end
 
   def registered
-    @register = Register.new
-    @register.save
+    @booking = Booking.new
+    @booking.save
   end
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json

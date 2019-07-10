@@ -1,5 +1,5 @@
 class Guest < ApplicationRecord
-  belongs_to :register, inverse_of: :guests
+  belongs_to :booking, inverse_of: :guests
 
   validates :fname, presence: true, length: {maximum: 100}
   validates :lname, presence: true, length: {maximum: 100}

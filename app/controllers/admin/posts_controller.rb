@@ -5,7 +5,7 @@
 #     #
 #     # def index
 #     #   super
-#     #   @resources = Post.
+#     #   @bookings = Post.
 #     #     page(params[:page]).
 #     #     per(10)
 #     # end
