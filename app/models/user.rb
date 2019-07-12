@@ -8,8 +8,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :timeoutable
 
-  has_many :registers, inverse_of: :user
-  has_many :events, through: :registers
+  has_many :bookings, inverse_of: :user
+  has_many :events, through: :bookings
   has_many :posts, inverse_of: :user
 
   def full_name

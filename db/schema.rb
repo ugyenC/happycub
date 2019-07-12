@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_09_081703) do
+ActiveRecord::Schema.define(version: 2019_07_10_074550) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(version: 2019_07_09_081703) do
     t.index ["trackable_type", "trackable_id"], name: "index_activities_on_trackable_type_and_trackable_id"
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_bookings_on_event_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.text "desc"
@@ -88,10 +97,10 @@ ActiveRecord::Schema.define(version: 2019_07_09_081703) do
     t.string "fname"
     t.string "lname"
     t.integer "age"
-    t.bigint "register_id"
+    t.bigint "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["register_id"], name: "index_guests_on_register_id"
+    t.index ["booking_id"], name: "index_guests_on_booking_id"
   end
 
   create_table "notifications", id: :serial, force: :cascade do |t|
@@ -118,15 +127,6 @@ ActiveRecord::Schema.define(version: 2019_07_09_081703) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
-  create_table "registers", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "event_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id"], name: "index_registers_on_event_id"
-    t.index ["user_id"], name: "index_registers_on_user_id"
   end
 
   create_table "registrations", force: :cascade do |t|
@@ -165,8 +165,8 @@ ActiveRecord::Schema.define(version: 2019_07_09_081703) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "guests", "registers"
+  add_foreign_key "bookings", "events"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "guests", "bookings"
   add_foreign_key "posts", "users"
-  add_foreign_key "registers", "events"
-  add_foreign_key "registers", "users"
 end

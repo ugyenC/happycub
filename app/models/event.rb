@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
 
   has_one_attached :post_image
-  has_many :registers, inverse_of: :event, dependent: :destroy
-  has_many :users, through: :registers
+  has_many :bookings, inverse_of: :event, dependent: :destroy
+  has_many :users, through: :bookings
 
   validates :title, presence: true
   validates :start_date, presence: true

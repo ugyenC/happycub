@@ -62,7 +62,7 @@
           <div class="col-md-6">
             <h4>Guest Attendees</h4>
             <ul class="list-group">
-              <% @event.registers.each do |r| %>
+              <% @event.bookings.each do |r| %>
                 <% r.guests.each do |g| %>
                   <li class="list-group-item">
                     <p><%= g.full_name %> </p>
@@ -74,11 +74,11 @@
           <% if current_user.admin? %>
             <%= link_to 'Edit', edit_event_path(@event) %>|
           <%else %>
-            <%= link_to "Cancel" ,register_path(event_id: @event.id),class:"btn btn-danger", method: :delete%>
+            <%= link_to "Cancel" , booking_path(event_id: @event.id), class:"btn btn-danger", method: :delete%>
           <% end %>
     <% else %>
       <% if @event.capacity > @event.users.count  %>
-        <%= link_to "Register",  new_register_path(user_id: current_user.id, event_id: @event.id, allow_guest: @event.allow_guests)	%>
+        <%= link_to "Booking", new_booking_path(user_id: current_user.id, event_id: @event.id, allow_guest: @event.allow_guests)	%>
       <% else %>
         <p>User Capacity is full.</p>
       <% end %>

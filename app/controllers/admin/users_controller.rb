@@ -5,7 +5,7 @@
 #     #
 #     # def index
 #     #   super
-#     #   @resources = User.
+#     #   @bookings = User.
 #     #     page(params[:page]).
 #     #     per(10)
 #     # end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :categories
-  resources :registers
+  resources :bookings
   resources :events
   post 'create_user' => 'users#new' ,as: :create_user
   namespace :admin do

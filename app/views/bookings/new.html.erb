@@ -1,0 +1,34 @@
+<div class="content">
+<div class="container-fluid">
+  <div class="card">
+  <%= simple_form_for @booking, url: '/bookings' , method: :post do |f| %>
+      <h2>Booking</h2>
+      <p>Event: <%= f.label @booking.event.title %></p><br/>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.hidden_field :event_id, :value => @booking.event.id %>
+      <p>Guest</p>
+      <%= f.simple_fields_for :guests do |g| %>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <%= g.label :first_name %><br/>
+              <%= g.text_field :fname, autofocus: true, autocomplete: "fname",class: "form-control" %>
+            </div>
+            <div class="col-md-6">
+              <%= g.label :last_name %><br/>
+              <%= g.text_field :lname, autofocus: true ,autocomplete: "lname",class: "form-control" %>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= g.label :age %><br/>
+          <%= g.text_field :age, autofocus: true ,class: "form-control"%>
+        </div>
+    <% end %>
+      <div class="form-action">
+        <%=f.submit "Create" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

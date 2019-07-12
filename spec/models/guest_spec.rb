@@ -8,6 +8,8 @@ describe Guest do
     it { should validate_presence_of(:lname) }
     it { should validate_length_of(:lname).is_at_most(100) }
     it { should validate_presence_of(:age) }
+    it { should belong_to(:booking)}
+
 
   end
 

@@ -4,7 +4,7 @@ class CreateGuests < ActiveRecord::Migration[5.2]
       t.string :fname
       t.string :lname
       t.integer :age
-      t.references :register, foreign_key: true
+      t.references :booking, foreign_key: true
 
       t.timestamps
     end
