@@ -10,6 +10,21 @@ RSpec.describe EventsController, type: :controller do
       expect(response).to render_template :index
     end
 
+    it 'should success and render ' do
+      get :events
+      expect(response).to have_http_status(200)
+      expect(response).to render_template :events
+    end
+
+    context 'GET #new' do
+      let!(:event){create :event}
+      it 'should success and render new page' do
+        get :new
+        expect(response).to have_http_status(200)
+        expect(response).to render_template :new
+      end
+    end
+
     it 'should create an event and generate a notice.' do
       params = {
         title: 'Test',
@@ -21,6 +36,15 @@ RSpec.describe EventsController, type: :controller do
       }
       post(:create, params: {event: params})
       expect(flash[:notice]).to eq "Event was successfully created."
+
+    end
+
+    it 'should not create an event and generate error message' do
+      params = {
+        title: ''}
+      post(:create, params: {event: params})
+      expect(response).to render_template :new
+      #expect(flash[:notice]).to eq "Event was not created."
     end
 
     it 'should display the details of event.' do
@@ -42,9 +66,18 @@ RSpec.describe EventsController, type: :controller do
       expect(flash[:notice]).to eq 'Event was successfully updated.'
     end
 
+    it 'should not create an event and generate error message' do
+      params = {
+        title: ''}
+      put(:update, params: {id: event.id, event: params})
+      expect(response).to render_template :edit
+      #expect(flash[:notice]).to eq "Event was not created."
+    end
+
     it 'should delete an event and display a success notice' do
       expect { delete :destroy, params: { id: event.id } }
-      #binding.pry
+      #expect(response).to redirect_to(assigns(:eventshow_path))
+      expect(response).to have_http_status(200)
       #expect(flash[:notice]).to eq "Event was successfully destroyed."
     end
 

@@ -5,7 +5,4 @@ class Post < ApplicationRecord
   validates :title, presence: true, length: {minimum: 5}
   validates :body, presence: true
 
-  def creation_time
-    (Time.current - created_at)
-  end
 end

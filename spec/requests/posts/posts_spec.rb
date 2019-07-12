@@ -1,5 +1,4 @@
 require 'rails_helper'
-
 RSpec.describe PostsController, type: :controller do
   describe 'Post controller request specs' do
     login_user
@@ -12,19 +11,33 @@ RSpec.describe PostsController, type: :controller do
       expect(response).to render_template :index
     end
 
+    it 'should success and render to new page' do
+      get :new
+      expect(response).to have_http_status(200)
+      expect(response).to render_template :new
+    end
+
+    it 'should success and render to new page' do
+      get :news
+      expect(response).to have_http_status(200)
+      expect(response).to render_template :news
+    end
+
     it 'should display the details of a particular post' do
       get :show, params: { id: post.id }
       expect(response).to have_http_status(200)
       expect(response).to render_template :show
     end
 
-    it 'should create an event' do
+    it 'should create an post' do
       params =   {
         title: 'New News',
         body: 'This is a test notification generated',
       }
       expect { post(:create, params: { post: params }) }
-      #expect(flash[:notice]).to eq 'News successfully created.'
+      expect(response).to have_http_status(200)
+      #expect(flash[:notice]).to eq 'Posts was successfully created.'
+
     end
     it 'should update an existing post and display a success notice' do
       params = {

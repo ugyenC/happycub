@@ -8,8 +8,15 @@ describe Event do
     it { should validate_presence_of(:start_date) }
     it { should validate_presence_of(:end_date) }
     it { should validate_presence_of(:location) }
-    it { should have_many(:bookings)}
+  end
+
+  describe 'Associations' do
+    it { should have_many(:bookings).inverse_of(:event).dependent(:destroy)}
     it { should have_many(:users).through(:bookings)}
+  end
+
+  describe "Methods" do
+    it ""
 
   end
 
