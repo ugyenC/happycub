@@ -14,19 +14,23 @@ RSpec.describe BookingsController, type: :controller do
       expect(response).to render_template :index
     end
 
-    it 'should success and render to index page' do
-      get :index
-      expect(response).to have_http_status(200)
-      expect(response).to render_template :index
+    context 'GET #new' do
+      let!(:event){create :event}
+      it 'should success and render new page' do
+        get :new
+        expect(response).to have_http_status(200)
+        expect(response).to render_template :new
+      end
     end
 
-    it 'should create an event and generate a notice.' do
+    it 'should create an booking and redirect to event path.' do
       params = {
        fname: 'test',
        lname: 'test',
        age: 13
       }
       post(:create, params: {booking: params})
+     # expect(response).to redirect_to(event_path(event.id))
       #expect(flash[:notice]).to eq "Event was successfully created."
     end
 

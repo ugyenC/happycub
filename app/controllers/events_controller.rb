@@ -39,7 +39,7 @@ class EventsController < BaseController
         format.html { redirect_to @event, notice: 'Event was successfully created.'}
         format.json { render :show, status: :created, location: @event }
       else
-        format.html { render :new }
+        format.html { render :new, notice: 'Event was not created.' }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end

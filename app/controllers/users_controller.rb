@@ -7,14 +7,10 @@ class UsersController < BaseController
   end
   def users
     @user = User.all
-    end
+  end
   def new
     @user = User.new
   end
-
- def edit
-   @user = User.find(params[:id])
- end
 
   def update
     @user = User.find(params[:id])
@@ -22,15 +18,13 @@ class UsersController < BaseController
       flash[:success] = "User successfully edited."
       redirect_to usershow_path
     else
-      flash.now[:error] = "User #{@user.fname} not edited."
-      render 'edit'
+      flash.now[:error] = "User not edited."
+      format.html{ render :edit }
     end
   end
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
-
     if @user.destroy
       flash[:success] = "User successfully deleted."
       redirect_to usershow_path
