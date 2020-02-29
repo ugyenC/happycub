@@ -21,7 +21,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'public_activity'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'pundit'
 #gem 'clearance'
 # Use SCSS for stylesheets
